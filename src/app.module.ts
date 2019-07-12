@@ -5,15 +5,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { BankModule } from './ideas/bank/bank.module';
 import { TransactionModule } from './ideas/transaction/transaction.module';
 import { WarehouseModule } from './ideas/warehouse/warehouse.module';
-import { ItemModule } from './ideas/item/item.module';
-
+import { ItemsModule } from './ideas/items/items.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot(),
     BankModule,
     TransactionModule,
     WarehouseModule,
-    ItemModule
+    ItemsModule
   ],
   controllers: [AppController],
   providers: [AppService],
