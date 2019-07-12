@@ -1,5 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { ApiModelProperty } from '@nestjs/swagger';
+import { ID_STRATEGY } from '../../utils/constants';
 
 @Entity()
 export class Bank {
@@ -7,7 +8,7 @@ export class Bank {
   @ApiModelProperty({
     description: 'ID'
   })
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn(ID_STRATEGY)
   id: string;
 
   @ApiModelProperty()

@@ -2,6 +2,7 @@ import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'ty
 import { TransactionType } from '../../utils/enums/transaction.type';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { Warehouse } from '../warehouse/warehouse.entity';
+import { ID_STRATEGY } from '../../utils/constants';
 
 @Entity()
 export class Transaction {
@@ -9,7 +10,7 @@ export class Transaction {
   @ApiModelProperty({
     description: 'ID'
   })
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn(ID_STRATEGY)
   id: string;
 
   @ApiModelProperty({ enum: ['PEMBELIAN', 'PENJUALAN']})
