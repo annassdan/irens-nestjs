@@ -3,14 +3,15 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BankModule } from './ideas/bank/bank.module';
-import { join } from 'path';
 import { TransactionModule } from './ideas/transaction/transaction.module';
+import { WarehouseModule } from './ideas/warehouse/warehouse.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(),
     BankModule,
-    TransactionModule
+    TransactionModule,
+    WarehouseModule
   ],
   controllers: [AppController],
   providers: [AppService],
