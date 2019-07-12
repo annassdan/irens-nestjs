@@ -8,10 +8,10 @@ export class Bank {
     description: 'ID'
   })
   @PrimaryGeneratedColumn('uuid')
-  readonly bankId: string;
+  id: string;
 
   @ApiModelProperty()
   @Column({ length: 255 })
-  readonly bankName: string;
+  bankName: string;
 
 }

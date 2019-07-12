@@ -10,11 +10,12 @@ export class Transaction {
     description: 'ID'
   })
   @PrimaryGeneratedColumn('uuid')
-  transactionId: string;
+  id: string;
 
   @ApiModelProperty({ enum: ['PEMBELIAN', 'PENJUALAN']})
   @Column('text')
   transactiontype: TransactionType;
+
 
   @ApiModelProperty()
   @Column('bool')
@@ -23,7 +24,7 @@ export class Transaction {
 
   @ApiModelProperty()
   @OneToOne(() => Bank)
-  @JoinColumn({ name: 'bankId'})
+  @JoinColumn()
   bank: Bank;
 
 
