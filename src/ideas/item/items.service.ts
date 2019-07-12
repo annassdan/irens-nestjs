@@ -15,6 +15,10 @@ export class ItemsService {
 
   findOne = (id: any): Promise<Items | undefined> => this.repo.findOne(id);
 
-  findAll = (options?: FindManyOptions<Items>): Promise<Items[]> => this.repo.find(options);
+  findAll = (options?: FindManyOptions<Items>): Promise<Items[]> => this.repo.find(
+    options
+      ? { order: { createdAt: 'DESC' } }
+      : { order: { createdAt: 'DESC' }, ...options }
+  );
 
 }

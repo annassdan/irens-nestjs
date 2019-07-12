@@ -15,7 +15,12 @@ export class WarehouseService {
 
   findOne = (id: any): Promise<Warehouse | undefined> => this.repo.findOne(id);
 
-  findAll = (options?: FindManyOptions<Warehouse>): Promise<Warehouse[]> => this.repo.find(options);
+
+  findAll = (options?: FindManyOptions<Warehouse>): Promise<Warehouse[]> => this.repo.find(
+    options
+      ? { order: { createdAt: 'DESC' } }
+      : { order: { createdAt: 'DESC' }, ...options }
+  );
   
   
 }

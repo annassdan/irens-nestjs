@@ -15,6 +15,10 @@ export class BankService  {
 
   findOne = (id: any): Promise<Bank | undefined> => this.repo.findOne(id);
 
-  findAll = (options?: FindManyOptions<Bank>): Promise<Bank[]> => this.repo.find(options);
+  findAll = (options?: FindManyOptions<Bank>): Promise<Bank[]> => this.repo.find(
+    options
+      ? { order: { createdAt: 'DESC' } }
+      : { order: { createdAt: 'DESC' }, ...options }
+  );
 
 }

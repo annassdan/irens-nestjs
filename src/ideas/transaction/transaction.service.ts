@@ -15,6 +15,10 @@ export class TransactionService {
 
   findOne = (id: any): Promise<Transaction | undefined> => this.repo.findOne(id);
 
-  findAll = (options?: FindManyOptions<Transaction>): Promise<Transaction[]> => this.repo.find(options);
+  findAll = (options?: FindManyOptions<Transaction>): Promise<Transaction[]> => this.repo.find(
+    options
+      ? { order: { createdAt: 'DESC' } }
+      : { order: { createdAt: 'DESC' }, ...options }
+  );
   
 }
