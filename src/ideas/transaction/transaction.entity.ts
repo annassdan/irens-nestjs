@@ -2,6 +2,7 @@ import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'ty
 import { TransactionType } from '../../utils/enums/transaction.type';
 import { Bank } from '../bank/bank.entity';
 import { ApiModelProperty } from '@nestjs/swagger';
+import { Warehouse } from '../warehouse/warehouse.entity';
 
 @Entity()
 export class Transaction {
@@ -23,9 +24,9 @@ export class Transaction {
 
 
   @ApiModelProperty()
-  @OneToOne(() => Bank)
+  @OneToOne(() => Warehouse)
   @JoinColumn()
-  bank: Bank;
+  warehouse: Warehouse;
 
 
 }
