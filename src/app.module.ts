@@ -6,13 +6,15 @@ import { BankModule } from './ideas/bank/bank.module';
 import { TransactionModule } from './ideas/transaction/transaction.module';
 import { WarehouseModule } from './ideas/warehouse/warehouse.module';
 import { ItemsModule } from './ideas/item/items.module';
+import { PeopleModule } from './ideas/people/people.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot(),
     BankModule,
     TransactionModule,
     WarehouseModule,
-    ItemsModule
+    ItemsModule,
+    PeopleModule
   ],
   controllers: [AppController],
   providers: [AppService],
