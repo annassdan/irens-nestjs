@@ -15,7 +15,7 @@ export class WarehouseService {
 
   findOne = (id: any): Promise<Warehouse | undefined> => this.repo.findOne(id);
 
-  findAll = (paging?: FindManyOptions<Warehouse>): Promise<Warehouse[]> => this.repo.find(paging);
+  findAll = (options?: FindManyOptions<Warehouse>): Promise<Warehouse[]> => this.repo.find(options);
   
   
 }

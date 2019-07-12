@@ -15,6 +15,6 @@ export class TransactionService {
 
   findOne = (id: any): Promise<Transaction | undefined> => this.repo.findOne(id);
 
-  findAll = (paging?: FindManyOptions<Transaction>): Promise<Transaction[]> => this.repo.find(paging);
+  findAll = (options?: FindManyOptions<Transaction>): Promise<Transaction[]> => this.repo.find(options);
   
 }

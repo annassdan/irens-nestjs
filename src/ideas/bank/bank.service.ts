@@ -15,6 +15,6 @@ export class BankService  {
 
   findOne = (id: any): Promise<Bank | undefined> => this.repo.findOne(id);
 
-  findAll = (paging?: FindManyOptions<Bank>): Promise<Bank[]> => this.repo.find(paging);
+  findAll = (options?: FindManyOptions<Bank>): Promise<Bank[]> => this.repo.find(options);
 
 }
