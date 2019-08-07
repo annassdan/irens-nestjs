@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { PeopleRepo } from '../People/People.repo';
-import { People } from '../People/People.entity';
+import { PeopleRepo } from './People.repo';
+import { People } from './People.entity';
 import { DeleteResult, FindManyOptions } from 'typeorm';
 
 @Injectable()

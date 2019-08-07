@@ -1,5 +1,5 @@
 import { Body, Controller, Delete, Get, NotFoundException, Param, Post } from '@nestjs/common';
-import { Warehouse } from '../Warehouse/Warehouse.entity';
+import { Warehouse } from './warehouse.entity';
 import { WarehouseService } from './warehouse.service';
 
 @Controller('warehouse')

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Warehouse } from '../Warehouse/Warehouse.entity';
+import { Warehouse } from './warehouse.entity';
 import { DeleteResult, FindManyOptions } from 'typeorm';
 import { WarehouseRepo } from './warehouse.repo';
 

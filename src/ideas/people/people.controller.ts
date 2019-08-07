@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, NotFoundException, Param, Post } from '@nestjs/common';
-import { PeopleService } from '../People/People.service';
-import { People } from '../People/People.entity';
+import { PeopleService } from './people.service';
+import { People } from './People.entity';
 @Controller('people')
 export class PeopleController {
   constructor(private readonly service: PeopleService) { }
