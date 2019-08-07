@@ -1,7 +1,6 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { ID_STRATEGY } from '../../utils/constants';
-import { WarehouseType } from '../../utils/enums/warehouse.type';
 import { PeopleType } from '../../utils/enums/people.type';
 
 @Entity()
