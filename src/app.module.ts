@@ -14,7 +14,7 @@ import { PeopleModule } from './ideas/people/people.module';
     TransactionModule,
     WarehouseModule,
     ItemsModule,
-    PeopleModule
+    // PeopleModule
   ],
   controllers: [AppController],
   providers: [AppService],
